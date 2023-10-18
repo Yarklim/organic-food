@@ -91,7 +91,7 @@ input::-ms-clear {
 
 button,
 input[type=submit] {
-  display: inline-block;
+  display: block;
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: transparent;
@@ -145,15 +145,39 @@ body {
           flex-grow: 1;
 }
 
+.circle__button {
+  width: clamp(32px, 5vw, 64px);
+  height: clamp(32px, 5vw, 64px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  color: var(--light-color);
+  background-color: var(--accent);
+}
+
+.circle__button-arrow {
+  height: clamp(18px, 3vw, 32px);
+  rotate: -90deg;
+  fill: #fff;
+}
+
 .container {
   max-width: 100vw;
-  padding: 0 clamp(10px, 6vw, 60px);
+  margin: 0 auto;
+  padding: clamp(20px, 5vw, 50px) clamp(10px, 6vw, 100px);
 }
 
 :root {
   --font-sans: "DM Sans", sans-serif;
   --font-rosario: "Rosario", sans-serif;
-  --titles-color: #222;
+  --title-color: #222;
   --paragraph-color: #555;
   --light-color: #fff;
   --dark-color: #000;
@@ -165,7 +189,8 @@ body {
   --tablet-small: 480px;
   --tablet-big: 768px;
   --desktop-small: 1024px;
-  --desktop-big: 1200px;
+  --desktop-medium: 1200px;
+  --desktop-big: 1440px;
 }
 
 .visually--hidden {
@@ -173,9 +198,116 @@ body {
   height: 0;
 }
 
-.example {
-  font-family: "DM Sans", sans-serif;
-  line-height: 1.5;
-  color: #2f2f37;
-  background-color: #fff;
+.hero {
+  text-align: center;
+  background-color: var(--background-color);
+}
+
+.hero__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+
+.hero__title {
+  font-family: var(--font-rosario);
+  font-size: clamp(18px, 6vw, 70px);
+  font-weight: 700;
+  line-height: 1.28;
+  color: var(--title-color);
+}
+
+.hero__description {
+  width: clamp(200px, 60vw, 640px);
+  font-size: clamp(10px, 1.5vw, 18px);
+  line-height: 1.67;
+  color: var(--paragraph-color);
+}
+
+.hero__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  margin-top: clamp(20px, 4vw, 40px);
+}
+
+.hero__button-text {
+  font-size: clamp(14px, 3vw, 18px);
+  font-weight: 500;
+  line-height: 1.67;
+  color: var(--title-color);
+}
+
+.hero__bottom-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .hero__bottom-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.hero__info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.hero__info-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 35px;
+  padding: 17px 33px;
+  border-radius: 6px;
+  background-color: var(--light-color);
+}
+
+.info__icon-wrapper {
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: var(--background-color);
 }/*# sourceMappingURL=index.css.map */

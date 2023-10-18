@@ -21,3 +21,27 @@ body {
 .main {
   flex-grow: 1;
 }
+
+.circle__button {
+  width: clamp(32px, 5vw, 64px);
+  height: clamp(32px, 5vw, 64px);
+
+  //   padding: 32px 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  color: var(--light-color);
+  background-color: var(--accent);
+}
+
+.circle__button-arrow {
+  height: clamp(18px, 3vw, 32px);
+
+  rotate: -90deg;
+
+  fill: #fff;
+}
