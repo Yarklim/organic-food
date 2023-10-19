@@ -39,9 +39,8 @@
 }
 
 .hero__button-text {
-  font-size: clamp(14px, 3vw, 18px);
+  font-size: clamp(14px, 2vw, 18px);
   font-weight: 500;
-  line-height: 1.67;
 
   color: var(--title-color);
 }
@@ -53,22 +52,47 @@
 
   margin-top: 20px;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     flex-direction: row;
+    align-items: center;
+    gap: clamp(5px, 4vw, 100px);
   }
+}
+
+.hero__img-wrapper {
+  width: clamp(300px, 80vw, 862px);
+
+  margin: 0 auto;
 }
 
 .hero__info-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  @media screen and (min-width: 572px) {
+    flex-direction: row;
+
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    gap: clamp(5px, 2vw, 30px);
+
+    margin-top: 0;
+  }
 }
 
 .hero__info-item {
-  display: flex;
-  gap: 35px;
+  width: 100%;
 
-  padding: 17px 33px;
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 3vw, 35px);
+
+  padding: clamp(8px, 2vw, 17px) clamp(17px, 3vw, 33px);
 
   border-radius: 6px;
 
@@ -86,4 +110,64 @@
   border-radius: 50%;
 
   background-color: var(--background-color);
+
+  @media screen and (min-width: 572px) {
+    width: 32px;
+    height: 32px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.info__item-icon {
+  width: 32px;
+  height: 32px;
+
+  @media screen and (min-width: 572px) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.info__item-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
+.info__text-value {
+  font-size: 32px;
+  line-height: 1;
+
+  color: var(--dark-color);
+
+  @media screen and (min-width: 572px) {
+    font-size: clamp(18px, 3vw, 32px);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: clamp(18px, 3vw, 40px);
+  }
+}
+
+.info__text-description {
+  font-size: 16px;
+
+  @media screen and (min-width: 572px) {
+    font-size: clamp(14px, 2vw, 16px);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
 }
