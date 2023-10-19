@@ -90,6 +90,10 @@ input::-ms-clear {
   display: none;
 }
 
+input::-moz-placeholder {
+  opacity: 1;
+}
+
 button,
 input[type='submit'] {
   display: block;

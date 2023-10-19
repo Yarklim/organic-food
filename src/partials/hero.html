@@ -1,4 +1,4 @@
-<section class="hero container">
+<section class="hero container" aria-label="Company info">
   <div class="hero__text-wrapper">
     <h1 class="hero__title">Organic Fruits & Vegetables</h1>
     <p class="hero__description">
@@ -10,7 +10,11 @@
 
   <div class="hero__button-wrapper">
     <p class="hero__button-text">Order Now</p>
-    <button type="button" class="hero__button circle__button">
+    <button
+      type="button"
+      class="hero__button circle__button"
+      aria-label="Button for Order"
+    >
       <svg width="32" height="32" class="circle__button-arrow">
         <use href="../src/images/sprite.svg#arrow"></use>
       </svg>
@@ -18,13 +22,17 @@
   </div>
 
   <div class="hero__bottom-wrapper">
-    <img
-      src="../src/images/pictures/vegetables-fruits.png"
-      alt="fruits & vegetables"
-      class="hero__img"
-    />
-    <ul class="hero__info-list">
-      <li class="hero__info-item">
+    <div class="hero__img-wrapper">
+      <img
+        src="../src/images/pictures/vegetables-fruits.png"
+        alt="fruits & vegetables"
+        width="862"
+        height="auto"
+        class="hero__img"
+      />
+    </div>
+    <ul class="hero__info-list" aria-label="Info list">
+      <li class="hero__info-item" aria-label="Info about user's order quantity">
         <div class="info__icon-wrapper">
           <svg width="32" height="32" class="info__item-icon">
             <use href="../src/images/sprite.svg#user"></use>
@@ -35,7 +43,10 @@
           <p class="info__text-description">User Order</p>
         </div>
       </li>
-      <li class="hero__info-item">
+      <li
+        class="hero__info-item"
+        aria-label="Info about user's reviews quantity"
+      >
         <div class="info__icon-wrapper">
           <svg width="32" height="32" class="info__item-icon">
             <use href="../src/images/sprite.svg#star"></use>
@@ -46,14 +57,14 @@
           <p class="info__text-description">Reviews(4.8)</p>
         </div>
       </li>
-      <li class="hero__info-item">
+      <li class="hero__info-item" aria-label="Info about items quantity">
         <div class="info__icon-wrapper">
           <svg width="32" height="32" class="info__item-icon">
             <use href="../src/images/sprite.svg#harvest"></use>
           </svg>
         </div>
         <div class="info__item-text">
-          <h2 class="info__text-value">300</h2>
+          <h2 class="info__text-value">3000</h2>
           <p class="info__text-description">Items</p>
         </div>
       </li>
