@@ -2,26 +2,48 @@
   background-color: var(--light-color);
 }
 
+.about__info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20;
+}
+
+.about__description {
+  text-align: center;
+  //   text-wrap: balance;
+}
+
 .about__img-wrapper {
-  width: 600px;
-  height: 600px;
+  width: clamp(200px, 80vw, 600px);
+  height: clamp(200px, 80vw, 600px);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   position: relative;
+
+  order: 2;
 }
 
 .about__img-elipse {
+  width: 64%;
+
   position: absolute;
   top: 0;
   right: 0;
 }
 
 .about__img-circle {
-  width: 420px;
-  height: 420px;
+  width: 70%;
+  height: 70%;
 
   position: relative;
 
@@ -30,8 +52,8 @@
 
   &::after {
     content: '';
-    width: 38px;
-    height: 420px;
+    width: 9%;
+    height: 100%;
 
     position: absolute;
     top: 0;
@@ -44,8 +66,8 @@
 
   &::before {
     content: '';
-    width: 38px;
-    height: 420px;
+    width: 9%;
+    height: 100%;
 
     position: absolute;
     top: 0;
@@ -58,7 +80,7 @@
 }
 
 .about__img {
-  width: 371px;
+  width: 88%;
 
   position: absolute;
   top: -10%;
@@ -66,4 +88,66 @@
   transform: translateX(-50%);
 
   z-index: 1;
+}
+
+.about__info-list {
+  display: flex;
+  flex-direction: column;
+
+  order: 1;
+}
+
+.about__info-item {
+  max-width: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  padding: 40px 60px;
+
+  border-radius: 6px;
+
+  &:nth-child(even) {
+    background-color: var(--background-color);
+  }
+}
+
+.about__icon-wrapper {
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: green;
+  //   background-color: var(--background-color);
+
+  //   &:nth-child(even) {
+  //     background-color: var(--light-color);
+  //   }
+}
+
+.about__info-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.about__info-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  color: var(--title-color);
+}
+
+.about__info-description {
+  font-size: 14px;
+  line-height: 1.42;
+
+  color: var(--paragraph-color);
 }

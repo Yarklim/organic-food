@@ -59,3 +59,21 @@ button {
 
   fill: #fff;
 }
+
+.section__title {
+  font-family: var(--font-rosario);
+  font-size: clamp(24px, 6vw, 70px);
+  font-weight: 700;
+  line-height: 1.28;
+
+  color: var(--title-color);
+}
+
+.section__description {
+  width: clamp(200px, 60vw, 600px);
+
+  font-size: clamp(10px, 1.5vw, 18px);
+  line-height: 1.67;
+
+  color: var(--paragraph-color);
+}
