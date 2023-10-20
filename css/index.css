@@ -530,9 +530,9 @@ button:focus-visible {
 }
 
 .about__img {
-  width: 88%;
+  width: 62%;
   position: absolute;
-  top: -10%;
+  top: 9%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
