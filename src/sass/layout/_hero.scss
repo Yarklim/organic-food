@@ -42,9 +42,9 @@
 }
 
 .hero__img-wrapper {
-  width: clamp(300px, 80vw, 862px);
+  width: clamp(280px, 80vw, 862px);
 
-  //   margin: 0 auto;
+  margin: 0 auto;
 }
 
 .hero__info-list {
@@ -54,10 +54,10 @@
   align-items: center;
   gap: 10px;
 
+  margin-top: 20px;
+
   @media screen and (min-width: 572px) {
     flex-direction: row;
-
-    margin-top: 20px;
   }
   @media screen and (min-width: 768px) {
     flex-direction: column;
