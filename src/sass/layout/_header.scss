@@ -1,0 +1,38 @@
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.header__nav-item {
+  line-height: 1.33;
+
+  color: var(--title-color);
+}
+
+.header__user-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__user-icon {
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+}
+
+.header__user-button {
+  min-width: 160px;
+  min-height: 40px;
+
+  line-height: 1.11;
+
+  border-radius: 8px;
+}

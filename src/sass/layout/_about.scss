@@ -121,17 +121,22 @@
 .about__info-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 20px;
 
   order: 2;
 
   @media screen and (min-width: 768px) {
+    margin-top: 0;
+
     order: 1;
   }
 }
 
 .about__info-item {
-  width: clamp(300px, 40vw, 500px);
-  //   width: 100%;
+  width: clamp(300px, 80vw, 500px);
 
   display: flex;
   justify-content: center;

@@ -27,6 +27,9 @@ button {
   transition: all 200ms ease-in-out;
   cursor: pointer;
 
+  color: var(--light-color);
+  background-color: var(--accent);
+
   &:active {
     transform: scale(0.95);
   }
@@ -47,9 +50,6 @@ button {
   align-items: center;
 
   border-radius: 50%;
-
-  color: var(--light-color);
-  background-color: var(--accent);
 }
 
 .circle__button-arrow {
