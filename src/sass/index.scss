@@ -1,14 +1,18 @@
-// ==== Base styles ====
+// ============ Base styles =============
 @import './base/reset';
 @import './base/common';
 @import './base/section';
 @import './base/container';
 
-// ==== Utils ====
+// =============== Utils ================
 @import './utils/vars';
 @import './utils/visually-hidden';
 
-// ==== Layouts ====
+// ============= Components =============
+@import './components/burger-menu';
+@import './components/buttons';
+
+// ============== Layouts ===============
 @import './layout/header';
 @import './layout/hero';
 @import './layout/about';
