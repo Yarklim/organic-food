@@ -6,7 +6,7 @@ body {
   height: 100%;
 
   font-family: var(--font-sans);
-  font-size: clamp(14px, 3vw, 18px);
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.67;
@@ -25,7 +25,7 @@ body {
 
 .section__title {
   font-family: var(--font-rosario);
-  font-size: clamp(24px, 6vw, 70px);
+  font-size: clamp(1.5rem, 0.679rem + 4.11vw, 4.375rem);
   font-weight: 700;
   line-height: 1.28;
 
@@ -33,9 +33,9 @@ body {
 }
 
 .section__description {
-  width: clamp(200px, 60vw, 600px);
+  width: clamp(18.75rem, 13.393rem + 26.79vw, 37.5rem);
 
-  font-size: clamp(10px, 1.5vw, 18px);
+  font-size: clamp(0.625rem, 0.482rem + 0.71vw, 1.125rem);
   line-height: 1.67;
 
   color: var(--paragraph-color);
