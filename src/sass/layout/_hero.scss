@@ -2,6 +2,20 @@
   text-align: center;
 
   background-color: var(--background-color);
+
+  position: relative;
+
+  &::before {
+    content: '';
+    width: clamp(9.375rem, 1.339rem + 40.18vw, 37.5rem);
+    height: clamp(6.25rem, 0.893rem + 26.79vw, 25rem);
+    position: absolute;
+    top: -7%;
+    left: -3%;
+    background-image: url('../src/images/pictures/fresh-melientha.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 
 .hero__text-wrapper {
@@ -75,13 +89,14 @@
   width: 100%;
 
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: clamp(10px, 3vw, 35px);
 
   padding: clamp(0.5rem, 0.339rem + 0.8vw, 1.063rem)
     clamp(1.063rem, 0.777rem + 1.43vw, 2.063rem);
 
-  border-radius: 6px;
+  border-radius: 8px;
 
   background-color: var(--light-color);
 }
@@ -133,7 +148,7 @@
 }
 
 .info__text-value {
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1;
 
   color: var(--dark-color);
@@ -148,7 +163,7 @@
 }
 
 .info__text-description {
-  font-size: 18px;
+  font-size: 14px;
 
   @media screen and (min-width: 572px) {
     font-size: clamp(0.75rem, 0.643rem + 0.54vw, 1.125rem);

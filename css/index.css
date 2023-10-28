@@ -400,6 +400,18 @@ button:focus-visible {
 .hero {
   text-align: center;
   background-color: var(--background-color);
+  position: relative;
+}
+.hero::before {
+  content: "";
+  width: clamp(9.375rem, 1.339rem + 40.18vw, 37.5rem);
+  height: clamp(6.25rem, 0.893rem + 26.79vw, 25rem);
+  position: absolute;
+  top: -7%;
+  left: -3%;
+  background-image: url("../src/images/pictures/fresh-melientha.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero__text-wrapper {
@@ -513,12 +525,15 @@ button:focus-visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: clamp(10px, 3vw, 35px);
   padding: clamp(0.5rem, 0.339rem + 0.8vw, 1.063rem) clamp(1.063rem, 0.777rem + 1.43vw, 2.063rem);
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: var(--light-color);
 }
 
@@ -582,7 +597,7 @@ button:focus-visible {
 }
 
 .info__text-value {
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1;
   color: var(--dark-color);
 }
@@ -598,7 +613,7 @@ button:focus-visible {
 }
 
 .info__text-description {
-  font-size: 18px;
+  font-size: 14px;
 }
 @media screen and (min-width: 572px) {
   .info__text-description {
@@ -668,8 +683,8 @@ button:focus-visible {
 }
 
 .about__img-wrapper {
-  width: clamp(200px, 80vw, 600px);
-  height: clamp(200px, 80vw, 600px);
+  width: clamp(12.5rem, 5.357rem + 35.71vw, 37.5rem);
+  height: clamp(12.5rem, 5.357rem + 35.71vw, 37.5rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,6 +694,7 @@ button:focus-visible {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 30px;
   position: relative;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -686,6 +702,7 @@ button:focus-visible {
 }
 @media screen and (min-width: 768px) {
   .about__img-wrapper {
+    margin-top: 0;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -693,15 +710,24 @@ button:focus-visible {
 }
 
 .about__img-elipse {
-  width: 64%;
+  width: 70%;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -20%;
+  right: -20%;
+}
+@media screen and (min-width: 768px) {
+  .about__img-elipse {
+    width: 50%;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .about__img-circle {
-  width: 70%;
-  height: 70%;
+  width: clamp(12.5rem, 5.357rem + 35.71vw, 22.5rem);
+  height: clamp(12.5rem, 5.357rem + 35.71vw, 22.5rem);
   position: relative;
   border-radius: 50%;
   background-color: var(--accent);
@@ -730,15 +756,28 @@ button:focus-visible {
   rotate: 45deg;
   background-color: var(--light-color);
 }
+@media screen and (min-width: 768px) {
+  .about__img-circle {
+    width: clamp(13.125rem, -1.875rem + 31.25vw, 26.25rem);
+    height: clamp(13.125rem, -1.875rem + 31.25vw, 26.25rem);
+  }
+}
 
 .about__img {
-  width: 62%;
+  width: clamp(11.25rem, 5.881rem + 26.85vw, 18.75rem);
   position: absolute;
-  top: 9%;
+  top: -20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .about__img {
+    top: 60px;
+    width: clamp(11.25rem, -2.321rem + 28.27vw, 23.125rem);
+    height: clamp(11.25rem, -2.321rem + 28.27vw, 23.125rem);
+  }
 }
 
 .about__info-list {
@@ -755,7 +794,7 @@ button:focus-visible {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
+  margin-top: clamp(2.5rem, 1.161rem + 6.7vw, 4.375rem);
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -770,27 +809,29 @@ button:focus-visible {
 }
 
 .about__info-item {
-  width: clamp(300px, 80vw, 500px);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 24px;
-  padding: clamp(10px, 5vw, 40px) clamp(20px, 5vw, 60px);
-  border-radius: 6px;
+  padding: clamp(0.625rem, 0.179rem + 2.23vw, 1.25rem) clamp(1.25rem, 0.357rem + 4.46vw, 2.5rem);
+  border-radius: 8px;
 }
 .about__info-item:nth-child(even) {
   background-color: var(--background-color);
 }
+@media screen and (min-width: 768px) {
+  .about__info-item {
+    padding: clamp(0.625rem, -1.518rem + 4.46vw, 2.5rem) clamp(1.25rem, -1.607rem + 5.95vw, 3.75rem);
+  }
+}
 
 .about__icon-wrapper {
-  width: 40px;
-  height: 40px;
+  width: clamp(2.5rem, 1.607rem + 4.46vw, 3.75rem);
+  height: clamp(2.5rem, 1.607rem + 4.46vw, 3.75rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -808,32 +849,44 @@ button:focus-visible {
 }
 @media screen and (min-width: 768px) {
   .about__icon-wrapper {
-    width: 80px;
-    height: 80px;
+    width: clamp(2.5rem, -0.357rem + 5.95vw, 5rem);
+    height: clamp(2.5rem, -0.357rem + 5.95vw, 5rem);
   }
 }
 
 .about__info-icon {
-  width: 16px;
-  height: 16px;
+  width: clamp(1rem, 0.464rem + 2.68vw, 1.75rem);
+  height: clamp(1rem, 0.464rem + 2.68vw, 1.75rem);
 }
 @media screen and (min-width: 768px) {
   .about__info-icon {
-    width: 32px;
-    height: 32px;
+    width: clamp(1rem, -0.143rem + 2.38vw, 2rem);
+    height: clamp(1rem, -0.143rem + 2.38vw, 2rem);
   }
 }
 
 .about__info-title {
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem);
   font-weight: 700;
   line-height: 1.5;
   color: var(--title-color);
 }
+@media screen and (min-width: 768px) {
+  .about__info-title {
+    font-size: clamp(0.875rem, 0.446rem + 0.89vw, 1.25rem);
+  }
+}
 
 .about__info-description {
-  width: clamp(180px, 40vw, 270px);
-  font-size: clamp(10px, 2vw, 14px);
+  width: clamp(13.188rem, 10.241rem + 14.73vw, 17.313rem);
+  font-size: clamp(0.625rem, 0.446rem + 0.89vw, 0.875rem);
   line-height: 1.42;
+  margin-top: 5px;
   color: var(--paragraph-color);
+}
+@media screen and (min-width: 768px) {
+  .about__info-description {
+    width: 277px;
+    font-size: clamp(0.625rem, 0.339rem + 0.6vw, 0.875rem);
+  }
 }/*# sourceMappingURL=index.css.map */
