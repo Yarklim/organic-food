@@ -45,13 +45,6 @@
   margin-top: clamp(1.25rem, 0.893rem + 1.79vw, 2.5rem);
 }
 
-.hero__button-text {
-  font-size: clamp(0.875rem, 0.804rem + 0.36vw, 1.125rem);
-  font-weight: 500;
-
-  color: var(--title-color);
-}
-
 .hero__bottom-wrapper {
   display: flex;
   flex-direction: column;
