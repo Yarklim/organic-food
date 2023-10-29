@@ -1,0 +1,27 @@
+.slider__buttons-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.slider__button-icon {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--light-dark-color);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.slider__button-prev {
+  rotate: -180deg;
+  fill: var(--light-dark-color);
+}
+
+.slider__button-next {
+  fill: var(--light-dark-color);
+}

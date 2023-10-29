@@ -181,6 +181,7 @@ body {
   --title-color: #222;
   --paragraph-color: #555;
   --light-color: #fff;
+  --light-dark-color: #ccc;
   --dark-color: #000;
   --accent: #09a66d;
   --hover-accent: #088859;
@@ -1061,4 +1062,37 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   position: absolute;
   bottom: 12%;
   left: -2%;
+}
+
+.slider__buttons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.slider__button-icon {
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--light-dark-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider__button-prev {
+  rotate: -180deg;
+  fill: var(--light-dark-color);
+}
+
+.slider__button-next {
+  fill: var(--light-dark-color);
 }/*# sourceMappingURL=index.css.map */
