@@ -91,6 +91,8 @@
 
   &:hover {
     scale: 1.07;
+
+    box-shadow: var(--dark-shadow-hover);
   }
 }
 

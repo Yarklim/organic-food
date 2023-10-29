@@ -188,6 +188,7 @@ body {
   --background-light: #fcfefd;
   --background-dark: #09a66c1e;
   --dark-shadow: 4px 4px 15px #09a66c6b;
+  --dark-shadow-hover: 6px 8px 20px #09a66c59;
   --mobile: 320px;
   --tablet-small: 480px;
   --tablet-medium: 572px;
@@ -1030,6 +1031,8 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 }
 .explore__img:hover {
   scale: 1.07;
+  -webkit-box-shadow: var(--dark-shadow-hover);
+          box-shadow: var(--dark-shadow-hover);
 }
 
 .img-1 {
