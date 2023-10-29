@@ -2,7 +2,9 @@
   text-align: center;
 
   background-color: var(--background-color);
+}
 
+.hero__container {
   position: relative;
 
   &::before {
@@ -10,11 +12,20 @@
     width: clamp(9.375rem, 1.339rem + 40.18vw, 37.5rem);
     height: clamp(6.25rem, 0.893rem + 26.79vw, 25rem);
     position: absolute;
-    top: -7%;
-    left: -3%;
+    top: -8%;
+    left: -10%;
     background-image: url('../src/images/pictures/fresh-melientha.png');
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media screen and (min-width: 572px) {
+      top: -15%;
+      left: -2%;
+    }
+    @media screen and (min-width: 768px) {
+      top: -20%;
+      left: -3%;
+    }
   }
 }
 
