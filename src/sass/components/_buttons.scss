@@ -17,6 +17,11 @@ button {
   &:focus-visible {
     outline: 2px solid black;
   }
+
+  &:hover .circle__button-arrow,
+  &:focus-visible .circle__button-arrow {
+    animation: squish 0.3s ease-in-out;
+  }
 }
 
 .circle__button {
@@ -36,11 +41,6 @@ button {
   rotate: -90deg;
 
   fill: #fff;
-
-  &:hover,
-  &:focus-visible {
-    animation: squish 0.3s ease-in-out;
-  }
 }
 @keyframes squish {
   50% {
