@@ -155,6 +155,7 @@ body {
   font-size: clamp(1.5rem, 0.679rem + 4.11vw, 4.375rem);
   font-weight: 700;
   line-height: 1.28;
+  text-wrap: balance;
   color: var(--title-color);
 }
 
@@ -1064,16 +1065,93 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   left: -2%;
 }
 
+.reviews__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.reviews__title {
+  text-align: center;
+}
+
+.slider__img-list {
+  margin-top: 10px;
+}
+
+.slider__img-item {
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider__img-rating {
+  width: 100px;
+  position: absolute;
+  bottom: 3%;
+  left: -7%;
+}
+
+.reviews__text-wrapper {
+  text-align: center;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.reviews__slider-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.slider__text {
+  text-align: justify;
+}
+
+.slider__text-name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.slider__rating-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+}
+
+.slider__rating-icon {
+  width: 18px;
+}
+
 .slider__buttons-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 25px;
 }
 
 .slider__button-icon {
-  width: 56px;
-  height: 56px;
+  width: 32px;
+  height: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1085,14 +1163,24 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
           align-items: center;
   border: 1px solid var(--light-dark-color);
   border-radius: 50%;
+  fill: var(--light-dark-color);
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slider__button-icon:hover, .slider__button-icon:focus-visible {
+  background-color: var(--accent);
+  fill: var(--light-color);
+}
+.slider__button-icon:active {
+  scale: 0.9;
 }
 
 .slider__button-prev {
   rotate: -180deg;
-  fill: var(--light-dark-color);
+  fill: inherit;
 }
 
 .slider__button-next {
-  fill: var(--light-dark-color);
+  fill: inherit;
 }/*# sourceMappingURL=index.css.map */
