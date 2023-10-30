@@ -1,0 +1,84 @@
+.download__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.download__img-wrapper {
+  width: clamp(9.375rem, 4.901rem + 22.37vw, 15.625rem);
+}
+
+.download__text-wrapper {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  @media screen and (min-width: 768px) {
+    width: clamp(23.75rem, 3.607rem + 41.96vw, 41.375rem);
+
+    margin: 0;
+
+    align-items: flex-start;
+
+    text-align: left;
+  }
+}
+
+.download__app-link {
+  display: inline-block;
+
+  min-width: 170px;
+  min-height: 40px;
+
+  padding: 11px 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+
+  font-size: 18px;
+
+  border-radius: 8px;
+
+  color: var(--paragraph-color);
+
+  background-color: var(--background-color);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    scale: 1.05;
+
+    color: var(--light-color);
+    background-color: var(--hover-accent);
+  }
+
+  &:active {
+    scale: 0.95;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+}
+
+.download__icons-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
