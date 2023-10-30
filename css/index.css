@@ -1170,6 +1170,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   width: 100%;
   text-align: justify;
 }
+
 .slider__text-name {
   font-size: 18px;
   font-weight: 500;
@@ -1204,6 +1205,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   .slider__buttons-wrapper {
     -ms-flex-item-align: center;
         align-self: center;
+    gap: clamp(1.563rem, 0.491rem + 2.23vw, 2.5rem);
   }
 }
 
@@ -1232,6 +1234,12 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 }
 .slider__button-icon:active {
   scale: 0.9;
+}
+@media screen and (min-width: 768px) {
+  .slider__button-icon {
+    width: clamp(2rem, 0.214rem + 3.72vw, 3.563rem);
+    height: clamp(2rem, 0.214rem + 3.72vw, 3.563rem);
+  }
 }
 
 .slider__button-prev {

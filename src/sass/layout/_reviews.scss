@@ -40,7 +40,6 @@
   position: relative;
 
   @media screen and (min-width: 768px) {
-    // width: clamp(12.5rem, -5.143rem + 36.76vw, 27.938rem);
     width: clamp(12.5rem, 1.786rem + 22.32vw, 21.875rem);
   }
 }
@@ -53,7 +52,6 @@
   left: -7%;
 
   @media screen and (min-width: 768px) {
-    // width: clamp(6.25rem, -2.321rem + 17.86vw, 13.75rem);
     width: clamp(6.25rem, 0.536rem + 11.9vw, 11.25rem);
   }
 }
@@ -77,10 +75,6 @@
 .slider__text {
   width: 100%;
   text-align: justify;
-
-  @media screen and (min-width: 768px) {
-    // width: 380px;
-  }
 }
 
 .slider__text-name {
@@ -108,6 +102,8 @@
 
   @media screen and (min-width: 768px) {
     align-self: center;
+
+    gap: clamp(1.563rem, 0.491rem + 2.23vw, 2.5rem);
   }
 }
 
@@ -136,6 +132,11 @@
 
   &:active {
     scale: 0.9;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: clamp(2rem, 0.214rem + 3.72vw, 3.563rem);
+    height: clamp(2rem, 0.214rem + 3.72vw, 3.563rem);
   }
 }
 
