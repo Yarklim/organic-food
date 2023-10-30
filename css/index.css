@@ -187,6 +187,7 @@ body {
   --accent: #09a66d;
   --hover-accent: #088859;
   --background-color: #f3fbf8;
+  --hover-background-color: #b6f0da;
   --background-light: #fcfefd;
   --background-dark: #09a66c1e;
   --dark-shadow: 4px 4px 15px #09a66c6b;
@@ -1320,7 +1321,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
           align-items: center;
   margin: 0 auto;
   font-size: 18px;
-  border-radius: 8px;
+  border-radius: 10px;
   color: var(--paragraph-color);
   background-color: var(--background-color);
   cursor: pointer;
@@ -1329,8 +1330,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 }
 .download__app-link:hover, .download__app-link:focus-visible {
   scale: 1.05;
-  color: var(--light-color);
-  background-color: var(--hover-accent);
+  background-color: var(--hover-background-color);
 }
 .download__app-link:active {
   scale: 0.95;
