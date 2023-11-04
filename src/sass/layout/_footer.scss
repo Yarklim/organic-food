@@ -79,6 +79,8 @@
 }
 
 .footer__contacts-email {
+  display: flex;
+  gap: 5px;
   color: var(--paragraph-color);
 }
 

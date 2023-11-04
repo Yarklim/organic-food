@@ -1459,6 +1459,10 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 }
 
 .footer__contacts-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
   color: var(--paragraph-color);
 }
 
