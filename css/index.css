@@ -166,6 +166,10 @@ body {
   color: var(--paragraph-color);
 }
 
+address {
+  all: unset;
+}
+
 [class*=__section] {
   padding: clamp(1.25rem, 0.179rem + 5.36vw, 5rem) 0;
 }
@@ -1363,7 +1367,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  gap: 20px;
+  gap: 15px;
   position: relative;
 }
 
