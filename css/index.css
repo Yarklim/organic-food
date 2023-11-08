@@ -170,6 +170,27 @@ address {
   all: unset;
 }
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 [class*=__section] {
   padding: clamp(1.25rem, 0.179rem + 5.36vw, 5rem) 0;
 }
@@ -317,6 +338,10 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   color: var(--title-color);
 }
 
+.header {
+  z-index: 2;
+}
+
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,7 +363,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
       -ms-flex-order: 1;
           order: 1;
 }
-@media screen and (max-width: 767.8px) {
+@media screen and (max-width: 991.8px) {
   .header__nav-list {
     position: fixed;
     left: -100%;
@@ -354,11 +379,11 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 60px;
+    gap: 20px;
     width: 100%;
     height: 100vh;
-    padding-top: 50px;
-    background-color: var(--light);
+    padding-top: 10px;
+    background-color: var(--background-color);
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -370,12 +395,21 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 .header__nav-item {
   line-height: 1.33;
   color: var(--title-color);
+  padding: 10px 0;
+  cursor: pointer;
 }
 
 .header__logo {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+}
+@media screen and (max-width: 991.8px) {
+  .header__logo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .header__user-wrapper {
@@ -390,12 +424,12 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
       -ms-flex-order: 3;
           order: 3;
 }
-@media screen and (max-width: 767.8px) {
+@media screen and (max-width: 991.8px) {
   .header__user-wrapper {
     position: fixed;
     left: -100%;
     top: 100px;
-    z-index: 5;
+    z-index: 6;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -432,6 +466,14 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   border-radius: 8px;
 }
 
+@media screen and (max-width: 991.8px) {
+  .burger-menu {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
 .hero {
   text-align: center;
   background-color: var(--background-color);
@@ -450,6 +492,8 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   background-image: url("../src/images/pictures/fresh-melientha.png");
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-animation: 120s linear infinite rotate;
+          animation: 120s linear infinite rotate;
 }
 @media screen and (min-width: 572px) {
   .hero__container::before {
@@ -959,6 +1003,8 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
     background-image: url("../src/images/pictures/fresh-melientha.png");
     background-size: cover;
     background-repeat: no-repeat;
+    -webkit-animation: 120s linear infinite rotate;
+            animation: 120s linear infinite rotate;
   }
 }
 

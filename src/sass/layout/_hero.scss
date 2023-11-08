@@ -18,6 +18,8 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    animation: 120s linear infinite rotate;
+
     @media screen and (min-width: 572px) {
       top: -15%;
       left: -2%;
