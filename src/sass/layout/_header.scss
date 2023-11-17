@@ -1,10 +1,14 @@
 .header {
   z-index: 30;
+
+  overflow: hidden;
 }
 
 .header__wrapper {
   display: flex;
   align-items: center;
+
+  position: relative;
 
   @media screen and (min-width: 992px) {
     justify-content: space-between;
@@ -58,9 +62,9 @@
 
   @media screen and (max-width: 991.8px) {
     position: absolute;
-    left: -100%;
-    bottom: -60%;
-    z-index: 20;
+    right: -100%;
+    top: 100px;
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
@@ -77,7 +81,7 @@
     transition: 0.3s;
 
     &.is-open {
-      left: 0;
+      right: 0;
     }
   }
 }

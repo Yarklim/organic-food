@@ -23,6 +23,10 @@ body {
   flex-grow: 1;
 }
 
+.logo {
+  width: clamp(2rem, 1.536rem + 2.32vw, 3.625rem);
+}
+
 .section__title {
   font-family: var(--font-rosario);
   font-size: clamp(1.5rem, 0.679rem + 4.11vw, 4.375rem);

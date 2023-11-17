@@ -150,6 +150,10 @@ body {
           flex-grow: 1;
 }
 
+.logo {
+  width: clamp(2rem, 1.536rem + 2.32vw, 3.625rem);
+}
+
 .section__title {
   font-family: var(--font-rosario);
   font-size: clamp(1.5rem, 0.679rem + 4.11vw, 4.375rem);
@@ -236,8 +240,6 @@ address {
   width: 40px;
   height: 40px;
   margin-left: auto;
-  border: 3px solid var(--paragraph-color);
-  border-radius: 50%;
   cursor: pointer;
 }
 @media screen and (max-width: 991.8px) {
@@ -341,6 +343,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 
 .header {
   z-index: 30;
+  overflow: hidden;
 }
 
 .header__wrapper {
@@ -350,6 +353,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 @media screen and (min-width: 992px) {
   .header__wrapper {
@@ -413,9 +417,9 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 @media screen and (max-width: 991.8px) {
   .header__user-wrapper {
     position: absolute;
-    left: -100%;
-    bottom: -60%;
-    z-index: 20;
+    right: -100%;
+    top: 100px;
+    z-index: 2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -435,7 +439,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
     transition: 0.3s;
   }
   .header__user-wrapper.is-open {
-    left: 0;
+    right: 0;
   }
 }
 
@@ -470,7 +474,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   background-image: url("../src/images/pictures/fresh-melientha.png");
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 10;
+  z-index: 20;
   -webkit-animation: 120s linear infinite rotate;
           animation: 120s linear infinite rotate;
 }
