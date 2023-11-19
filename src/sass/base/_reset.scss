@@ -5,10 +5,16 @@
   border: none;
 }
 
+html {
+  box-sizing: border-box;
+  //   position: relative;
+  //   overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 :focus,

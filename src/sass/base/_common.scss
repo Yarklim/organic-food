@@ -12,6 +12,12 @@ body {
   line-height: 1.67;
 }
 
+.no-scroll {
+  overflow: hidden;
+
+  padding-right: 15px;
+}
+
 .page__wrapper {
   display: flex;
   flex-direction: column;

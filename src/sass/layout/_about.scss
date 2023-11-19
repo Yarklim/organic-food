@@ -54,6 +54,7 @@
 
 .about__img-elipse {
   width: 70%;
+  height: auto;
 
   position: absolute;
   top: -20%;
@@ -113,6 +114,7 @@
 
 .about__img {
   width: clamp(11.25rem, 5.881rem + 26.85vw, 18.75rem);
+  height: auto;
 
   position: absolute;
   top: -20px;
@@ -125,7 +127,6 @@
     top: 60px;
 
     width: clamp(11.25rem, -2.321rem + 28.27vw, 23.125rem);
-    height: clamp(11.25rem, -2.321rem + 28.27vw, 23.125rem);
   }
 }
 
