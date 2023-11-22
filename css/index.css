@@ -509,8 +509,14 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 20;
+  animation: 120s linear infinite rotate;
   -webkit-animation: 120s linear infinite rotate;
-          animation: 120s linear infinite rotate;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__container::before .animation {
+    animation: none;
+    -webkit-animation: none;
+  }
 }
 @media screen and (min-width: 572px) {
   .hero__container::before {
@@ -1021,8 +1027,14 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
     background-image: url("../src/images/pictures/fresh-melientha.png");
     background-size: cover;
     background-repeat: no-repeat;
+    animation: 120s linear infinite rotate;
     -webkit-animation: 120s linear infinite rotate;
-            animation: 120s linear infinite rotate;
+  }
+}
+@media screen and (min-width: 768px) and (prefers-reduced-motion: reduce) {
+  .explore__container::after .animation {
+    animation: none;
+    -webkit-animation: none;
   }
 }
 

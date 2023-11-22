@@ -21,6 +21,14 @@
     z-index: 20;
 
     animation: 120s linear infinite rotate;
+    -webkit-animation: 120s linear infinite rotate;
+
+    @media (prefers-reduced-motion: reduce) {
+      .animation {
+        animation: none;
+        -webkit-animation: none;
+      }
+    }
 
     @media screen and (min-width: 572px) {
       top: -15%;
