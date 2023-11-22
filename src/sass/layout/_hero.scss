@@ -12,7 +12,7 @@
     width: clamp(9.375rem, 1.339rem + 40.18vw, 37.5rem);
     height: clamp(6.25rem, 0.893rem + 26.79vw, 25rem);
     position: absolute;
-    top: -8%;
+    top: -5%;
     left: -10%;
     background-image: url('../src/images/pictures/fresh-melientha.png');
     background-size: cover;
@@ -31,12 +31,11 @@
     }
 
     @media screen and (min-width: 572px) {
-      top: -15%;
-      left: -2%;
+      top: -8%;
+      left: -5%;
     }
     @media screen and (min-width: 768px) {
-      top: -20%;
-      left: -3%;
+      top: -10%;
     }
   }
 }
