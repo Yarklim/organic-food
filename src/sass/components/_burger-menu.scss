@@ -1,8 +1,8 @@
 .burger-menu {
   display: none;
 
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 
   margin-left: auto;
 
@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
   }
 
   &.is-open .bar {
@@ -21,10 +21,10 @@
       opacity: 0;
     }
     &:nth-child(1) {
-      transform: translateY(6px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
     }
     &:nth-child(3) {
-      transform: translateY(-6px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
     }
   }
 }
@@ -32,11 +32,11 @@
 .bar {
   display: block;
 
-  width: 20px;
-  height: 2px;
+  width: 30px;
+  height: 3px;
 
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 
-  background-color: var(--paragraph-color);
+  background-color: var(--accent);
 }

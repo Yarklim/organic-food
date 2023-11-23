@@ -111,6 +111,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 1.67;
+  scroll-behavior: smooth;
 }
 
 .no-scroll {
@@ -222,8 +223,8 @@ address {
 
 .burger-menu {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-left: auto;
   cursor: pointer;
 }
@@ -242,39 +243,44 @@ address {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 4px;
+    gap: 5px;
   }
 }
 .burger-menu.is-open .bar:nth-child(2) {
   opacity: 0;
 }
 .burger-menu.is-open .bar:nth-child(1) {
-  -webkit-transform: translateY(6px) rotate(45deg);
-          transform: translateY(6px) rotate(45deg);
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
 }
 .burger-menu.is-open .bar:nth-child(3) {
-  -webkit-transform: translateY(-6px) rotate(-45deg);
-          transform: translateY(-6px) rotate(-45deg);
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
 }
 
 .bar {
   display: block;
-  width: 20px;
-  height: 2px;
+  width: 30px;
+  height: 3px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: var(--paragraph-color);
+  background-color: var(--accent);
 }
 
 .mob-menu__nav {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: -100%;
   top: clamp(4.5rem, 4.083rem + 2.09vw, 5.375rem);
+  z-index: 10;
   width: clamp(19.375rem, 16.692rem + 13.41vw, 25rem);
   padding: 50px;
   border-bottom-left-radius: 20px;
   background-color: #5b7c52;
-  z-index: 10;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.mob-menu__nav.menu-open {
+  right: 0;
 }
 
 .mob-menu__nav-list {
@@ -289,7 +295,7 @@ address {
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
-  font-size: 18px;
+  font-size: 24px;
   color: var(--light-color);
 }
 
@@ -298,7 +304,7 @@ address {
 }
 
 .mob-menu__nav-download {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 .mob-menu__user-download {
@@ -314,6 +320,7 @@ address {
   min-width: 160px;
   min-height: 40px;
   line-height: 1.11;
+  padding: 10px 20px;
   border-radius: 8px;
   background-color: var(--accent);
 }
