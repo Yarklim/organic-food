@@ -329,8 +329,8 @@ address {
 button {
   color: var(--light-color);
   background-color: var(--accent);
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 button:hover, button:focus-visible {
@@ -420,26 +420,25 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   border-radius: 10px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
 }
 
 .modal__close--icon {
   width: 30px;
   height: 30px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border-radius: 50%;
   stroke: var(--paragraph-color);
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.modal__close--icon:hover {
-  background: var(--accent);
 }
 
 .modal__form--title {

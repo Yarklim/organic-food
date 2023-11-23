@@ -2,7 +2,7 @@ button {
   color: var(--light-color);
   background-color: var(--accent);
 
-  transition: all 200ms ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 
   &:hover,
