@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".burger-menu"),n=document.querySelector(".mob-menu__nav");e.addEventListener("click",(function(){e.classList.toggle("is-open"),n.classList.toggle("menu-open")})),document.querySelectorAll(".mob-menu__nav-link").forEach((function(o){return o.addEventListener("click",(function(o){e.classList.remove("is-open"),n.classList.remove("menu-open")}))}))}();
+//# sourceMappingURL=index.1da85995.js.map
