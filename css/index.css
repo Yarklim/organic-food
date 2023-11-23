@@ -684,7 +684,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   gap: clamp(10px, 3vw, 35px);
   padding: clamp(0.5rem, 0.339rem + 0.8vw, 1.063rem) clamp(1.063rem, 0.777rem + 1.43vw, 2.063rem);
   border-radius: 8px;
-  background: linear-gradient(149deg, rgb(24, 187, 156) 0%, rgb(135, 196, 119) 42%, rgb(195, 243, 163) 72%, rgb(125, 190, 163) 100%);
+  background: linear-gradient(149deg, rgb(98, 196, 178) 20%, rgb(169, 247, 148) 42%, rgb(166, 224, 180) 72%, rgb(154, 233, 201) 100%);
   -webkit-animation: gradient 10s infinite linear;
           animation: gradient 10s infinite linear;
   background-size: 600%;
