@@ -113,7 +113,27 @@
 
   border-radius: 8px;
 
-  background-color: var(--light-color);
+  background: linear-gradient(
+    149deg,
+    rgba(24, 187, 156, 1) 0%,
+    rgb(135, 196, 119) 42%,
+    rgb(195, 243, 163) 72%,
+    rgb(125, 190, 163) 100%
+  );
+  animation: gradient 10s infinite linear;
+  background-size: 600%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 80% 0%;
+  }
+  50% {
+    background-position: 20% 100%;
+  }
+  100% {
+    background-position: 80% 0%;
+  }
 }
 
 .info__icon-wrapper {
