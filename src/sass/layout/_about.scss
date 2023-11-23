@@ -78,6 +78,8 @@
   border-radius: 50%;
   background-color: var(--accent);
 
+  animation: circle-rotate 180s infinite linear;
+
   &::after {
     content: '';
     width: 9%;
@@ -109,6 +111,15 @@
   @media screen and (min-width: 768px) {
     width: clamp(13.125rem, -1.875rem + 31.25vw, 26.25rem);
     height: clamp(13.125rem, -1.875rem + 31.25vw, 26.25rem);
+  }
+}
+
+@keyframes circle-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 

@@ -908,6 +908,8 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   position: relative;
   border-radius: 50%;
   background-color: var(--accent);
+  -webkit-animation: circle-rotate 180s infinite linear;
+          animation: circle-rotate 180s infinite linear;
 }
 .about__img-circle::after {
   content: "";
@@ -940,6 +942,27 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   }
 }
 
+@-webkit-keyframes circle-rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .about__img {
   width: clamp(11.25rem, 5.881rem + 26.85vw, 18.75rem);
   height: auto;
