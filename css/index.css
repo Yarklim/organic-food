@@ -1387,11 +1387,6 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-.next-slider {
-  -webkit-transform: translateX(-33%);
-          transform: translateX(-33%);
-}
-
 .carousel__item--wrapper {
   width: 100%;
   display: -webkit-box;
@@ -1557,7 +1552,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   transition: all 0.3s ease-in-out;
 }
 .carousel__button-icon:hover, .carousel__button-icon:focus-visible {
-  background-color: var(--accent);
+  background-color: var(--hover-accent);
   fill: var(--light-color);
 }
 .carousel__button-icon:active {

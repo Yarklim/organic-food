@@ -13,10 +13,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.next-slider {
-  transform: translateX(-33%);
-}
-
 .carousel__item--wrapper {
   width: 100%;
   display: flex;
@@ -146,7 +142,7 @@
 
   &:hover,
   &:focus-visible {
-    background-color: var(--accent);
+    background-color: var(--hover-accent);
     fill: var(--light-color);
   }
 
