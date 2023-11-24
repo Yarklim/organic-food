@@ -1,6 +1,6 @@
 export function subscribeModal() {
   return `<form class="modal__form" name="contacts-form" id="modal__form">
-    <strong class="modal__form--title">Subscribe to us</strong>
+    <strong class="modal__form--title">Contact Us</strong>
     <div
       class="modal__form--details"
       role="group"
