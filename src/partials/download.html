@@ -1,13 +1,18 @@
 <section class="download__section" id="download" aria-label="Download app">
   <article class="download__container">
     <div class="download__img-wrapper">
-      <img
-        loading="lazy"
-        src="../src/images/pictures/smartphone.png"
-        alt="smartphone"
-        width="235"
-        class="download__img"
-      />
+      <picture class="download__img">
+        <source
+          srcset="../src/images/pictures/smartphone.webp"
+          type="image/webp"
+        />
+        <img
+          loading="lazy"
+          src="../src/images/pictures/smartphone.png"
+          alt="smartphone"
+          width="235"
+        />
+      </picture>
     </div>
 
     <div class="download__text-wrapper">

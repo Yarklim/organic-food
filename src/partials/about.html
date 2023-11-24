@@ -11,14 +11,19 @@
     <div class="about__info-wrapper">
       <div class="about__img-wrapper">
         <div class="about__img-circle"></div>
-        <img
-          loading="lazy"
-          class="about__img"
-          src="../src/images/pictures/food-package.png"
-          alt="food package"
-          width="373"
-          height="376"
-        />
+        <picture class="about__img">
+          <source
+            srcset="../src/images/pictures/food-package.webp"
+            type="image/webp"
+          />
+          <img
+            loading="lazy"
+            src="../src/images/pictures/food-package.png"
+            alt="food package"
+            width="373"
+            height="376"
+          />
+        </picture>
         <img
           loading="lazy"
           class="about__img-elipse"
