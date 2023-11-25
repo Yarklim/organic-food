@@ -7,14 +7,13 @@ const modalContent = document.querySelector('.modal__content');
 
 openModal.forEach(el => {
   el.addEventListener('click', toggleModal);
-  document.body.classList.add('no-scroll');
 });
 
 closeModal.forEach(el => {
   el.addEventListener('click', toggleModal);
-  document.body.classList.remove('no-scroll');
 });
 
 function toggleModal() {
   modal.classList.toggle('is-hidden');
+  document.body.classList.toggle('no-scroll');
 }
