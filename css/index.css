@@ -705,7 +705,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   }
 }
 
-.hero__text-wrapper {
+.hero__text--wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -719,7 +719,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   gap: 16px;
 }
 
-.hero__button-wrapper {
+.hero__button--wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -733,7 +733,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   margin-top: clamp(1.25rem, 0.893rem + 1.79vw, 2.5rem);
 }
 
-.hero__bottom-wrapper {
+.hero__bottom--wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -747,7 +747,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   margin-top: 20px;
 }
 @media screen and (min-width: 768px) {
-  .hero__bottom-wrapper {
+  .hero__bottom--wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -759,14 +759,52 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   }
 }
 
-.hero__img-wrapper {
+.swiper--wrapper {
+  width: clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem);
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .swiper--wrapper {
+    margin: 0;
+  }
+}
+
+.swiper--wrapper .swiper__line {
+  white-space: nowrap;
+}
+
+.swiper__line {
+  width: 500%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.swiper__slide {
+  position: relative;
+}
+
+.hero__img--wrapper {
   width: clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem);
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
-  .hero__img-wrapper {
+  .hero__img--wrapper {
     margin: 0;
   }
+}
+
+.swiper__slide-button {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
 .hero__info-list {
@@ -848,7 +886,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
     background-position: 80% 0%;
   }
 }
-.info__icon-wrapper {
+.info__icon--wrapper {
   width: 56px;
   height: 56px;
   display: -webkit-box;
@@ -864,13 +902,13 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   background-color: var(--background-color);
 }
 @media screen and (min-width: 572px) {
-  .info__icon-wrapper {
+  .info__icon--wrapper {
     width: 32px;
     height: 32px;
   }
 }
 @media screen and (min-width: 768px) {
-  .info__icon-wrapper {
+  .info__icon--wrapper {
     width: 56px;
     height: 56px;
   }

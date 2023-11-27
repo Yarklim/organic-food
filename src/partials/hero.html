@@ -1,6 +1,6 @@
 <section class="hero hero__section" aria-label="Company info">
   <div class="hero__container">
-    <div class="hero__text-wrapper">
+    <div class="hero__text--wrapper">
       <h1 class="section__title">Organic Fruits & Vegetables</h1>
       <p class="section__description">
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -9,7 +9,7 @@
       </p>
     </div>
 
-    <div class="hero__button-wrapper">
+    <div class="hero__button--wrapper">
       <p class="hero__button-text">Contact Us</p>
       <button
         type="button"
@@ -23,8 +23,150 @@
       </button>
     </div>
 
-    <div class="hero__bottom-wrapper">
-      <div class="hero__img-wrapper">
+    <div class="hero__bottom--wrapper">
+      <!-- Gallery Swiper -->
+      <div class="swiper--wrapper js-swiper">
+        <div class="swiper__line">
+          <div class="swiper__slide" draggable="false">
+            <picture class="hero__img">
+              <source
+                srcset="
+                  ../src/images/food/vegetables-fruits-1.webp    1x,
+                  ../src/images/food/vegetables-fruits-1@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <img
+                srcset="
+                  ../src/images/food/vegetables-fruits-1.jpg    1x,
+                  ../src/images/food/vegetables-fruits-1@2x.jpg 2x
+                "
+                src="../src/images/food/vegetables-fruits-1.jpg"
+                alt="fruits & vegetables"
+                width="862"
+              />
+            </picture>
+            <button
+              class="swiper__slide-button"
+              data-modal-open
+              aria-label="open modal for more info"
+            >
+              Learn More
+            </button>
+          </div>
+          <div class="swiper__slide">
+            <picture class="hero__img">
+              <source
+                srcset="
+                  ../src/images/food/vegetables-fruits-2.webp    1x,
+                  ../src/images/food/vegetables-fruits-2@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <img
+                srcset="
+                  ../src/images/food/vegetables-fruits-2.jpg    1x,
+                  ../src/images/food/vegetables-fruits-2@2x.jpg 2x
+                "
+                src="../src/images/food/vegetables-fruits-2.jpg"
+                alt="avocado"
+                width="862"
+              />
+            </picture>
+            <button
+              class="swiper__slide-button"
+              data-modal-open
+              aria-label="open modal for more info"
+            >
+              Learn More
+            </button>
+          </div>
+          <div class="swiper__slide">
+            <picture class="hero__img">
+              <source
+                srcset="
+                  ../src/images/food/vegetables-fruits-3.webp    1x,
+                  ../src/images/food/vegetables-fruits-3@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <img
+                srcset="
+                  ../src/images/food/vegetables-fruits-3.jpg    1x,
+                  ../src/images/food/vegetables-fruits-3@2x.jpg 2x
+                "
+                src="../src/images/food/vegetables-fruits-3.jpg"
+                alt="different vegetables"
+                width="862"
+              />
+            </picture>
+            <button
+              class="swiper__slide-button"
+              data-modal-open
+              aria-label="open modal for more info"
+            >
+              Learn More
+            </button>
+          </div>
+          <div class="swiper__slide">
+            <picture class="hero__img">
+              <source
+                srcset="
+                  ../src/images/food/vegetables-fruits-4.webp    1x,
+                  ../src/images/food/vegetables-fruits-4@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <img
+                srcset="
+                  ../src/images/food/vegetables-fruits-4.jpg    1x,
+                  ../src/images/food/vegetables-fruits-4@2x.jpg 2x
+                "
+                src="../src/images/food/vegetables-fruits-4.jpg"
+                alt="berry"
+                width="862"
+              />
+            </picture>
+            <button
+              class="swiper__slide-button"
+              data-modal-open
+              aria-label="open modal for more info"
+            >
+              Learn More
+            </button>
+          </div>
+          <div class="swiper__slide">
+            <picture class="hero__img">
+              <source
+                srcset="
+                  ../src/images/food/vegetables-fruits-5.webp    1x,
+                  ../src/images/food/vegetables-fruits-5@2x.webp 2x
+                "
+                type="image/webp"
+              />
+              <img
+                srcset="
+                  ../src/images/food/vegetables-fruits-5.jpg    1x,
+                  ../src/images/food/vegetables-fruits-5@2x.jpg 2x
+                "
+                src="../src/images/food/vegetables-fruits-5.jpg"
+                alt="a few apples"
+                width="862"
+              />
+            </picture>
+            <button
+              class="swiper__slide-button"
+              data-modal-open
+              aria-label="open modal for more info"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- ------------- -->
+      <!-- Image wrapper -->
+      <!-- <div class="hero__img--wrapper">
         <picture class="hero__img">
           <source
             srcset="
@@ -43,10 +185,11 @@
             width="862"
           />
         </picture>
-      </div>
+      </div> -->
+      <!-- --------------- -->
       <ul class="hero__info-list">
         <li class="hero__info-item">
-          <div class="info__icon-wrapper">
+          <div class="info__icon--wrapper">
             <svg width="32" height="32" class="info__item-icon">
               <use href="../src/images/sprite.svg#user"></use>
             </svg>
@@ -57,7 +200,7 @@
           </div>
         </li>
         <li class="hero__info-item">
-          <div class="info__icon-wrapper">
+          <div class="info__icon--wrapper">
             <svg width="32" height="32" class="info__item-icon">
               <use href="../src/images/sprite.svg#star"></use>
             </svg>
@@ -68,7 +211,7 @@
           </div>
         </li>
         <li class="hero__info-item">
-          <div class="info__icon-wrapper">
+          <div class="info__icon--wrapper">
             <svg width="32" height="32" class="info__item-icon">
               <use href="../src/images/sprite.svg#harvest"></use>
             </svg>

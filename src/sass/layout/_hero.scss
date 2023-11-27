@@ -40,14 +40,14 @@
   }
 }
 
-.hero__text-wrapper {
+.hero__text--wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
 }
 
-.hero__button-wrapper {
+.hero__button--wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@
   margin-top: clamp(1.25rem, 0.893rem + 1.79vw, 2.5rem);
 }
 
-.hero__bottom-wrapper {
+.hero__bottom--wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -69,8 +69,38 @@
     gap: clamp(0.313rem, -1.384rem + 8.48vw, 6.25rem);
   }
 }
+//  ========= Gallery Swiper ========
+.swiper--wrapper {
+  width: clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem);
 
-.hero__img-wrapper {
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+}
+
+.swiper--wrapper .swiper__line {
+  white-space: nowrap;
+}
+
+.swiper__line {
+  width: calc(100% * 5);
+
+  display: flex;
+
+  cursor: grab;
+
+  transition: all 0.3s ease;
+}
+
+.swiper__slide {
+  position: relative;
+}
+
+.hero__img--wrapper {
   width: clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem);
 
   margin: 0 auto;
@@ -79,6 +109,17 @@
     margin: 0;
   }
 }
+
+.swiper__slide-button {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+}
+// ==================================
 
 .hero__info-list {
   display: flex;
@@ -136,7 +177,7 @@
   }
 }
 
-.info__icon-wrapper {
+.info__icon--wrapper {
   width: 56px;
   height: 56px;
 

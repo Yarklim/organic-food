@@ -8,7 +8,7 @@ nextBtn.addEventListener('click', toNextImg);
 prevBtn.addEventListener('click', toPrevImg);
 
 function toNextImg() {
-  if (position === -66.66) {
+  if (position > -66.66) {
     nextBtn.setAttribute('disabled', 'disabled');
     return;
   }
