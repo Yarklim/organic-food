@@ -570,6 +570,44 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   border-radius: 6px;
 }
 
+.to-top__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: clamp(2rem, 1.643rem + 1.79vw, 3.25rem);
+  height: clamp(2rem, 1.643rem + 1.79vw, 3.25rem);
+  position: fixed;
+  bottom: 2%;
+  right: 6%;
+  border-radius: 50%;
+  background-color: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.to-top__button:focus-visible, .to-top__button:hover {
+  background-color: var(--hover-accent);
+}
+
+.to-top__button.active {
+  bottom: 6%;
+  pointer-events: all;
+  opacity: 0.6;
+}
+
+.to-top__icon {
+  fill: var(--light-color);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .header {
   z-index: 30;
   overflow: hidden;
