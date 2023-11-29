@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Rosario:wght@700&display=swap");
 /* Reset and base styles */
 @import '~node_modules/modern-normalize/modern-normalize.css';
 * {
@@ -199,7 +200,7 @@ address {
   --light-color: #fff;
   --light-dark-color: #ccc;
   --dark-color: #000;
-  --accent: #1f885e;
+  --accent: #1e855c;
   --hover-accent: #088859;
   --background-color: #f3fbf8;
   --hover-background-color: #b6f0da;
