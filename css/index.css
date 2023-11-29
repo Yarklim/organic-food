@@ -205,6 +205,7 @@ address {
   --hover-background-color: #b6f0da;
   --background-light: #fcfefd;
   --background-dark: #09a66c1e;
+  --dropdown-bg: #598a4c;
   --dark-shadow: 4px 4px 15px #09a66c6b;
   --dark-shadow-hover: 6px 8px 20px #09a66c59;
   --mobile: 320px;
@@ -275,7 +276,7 @@ address {
   width: clamp(19.375rem, 16.692rem + 13.41vw, 25rem);
   padding: 50px;
   border-bottom-left-radius: 20px;
-  background-color: #5b7c52;
+  background-color: var(--dropdown-bg);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -413,7 +414,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   max-width: 700px;
   max-height: 500px;
   padding: 40px clamp(1.25rem, -0.75rem + 10vw, 3.75rem);
-  background: var(--hover-background-color);
+  background-color: var(--dropdown-bg);
   -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.12), 1px 3px 3px rgba(0, 0, 0, 0.14), 1px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.12), 1px 3px 3px rgba(0, 0, 0, 0.14), 1px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -437,7 +438,8 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 .modal__close--icon {
   width: 30px;
   height: 30px;
-  stroke: var(--paragraph-color);
+  fill: transparent;
+  stroke: var(--light-dark-color);
 }
 
 .modal__form--title {
@@ -448,7 +450,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   line-height: 1.5;
   letter-spacing: 0.03em;
   text-align: center;
-  color: var(--title-color);
+  color: var(--light-dark-color);
 }
 @media screen and (min-width: 1200px) {
   .modal__form--title {
@@ -485,15 +487,16 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   line-height: 1.16;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
-  color: var(--paragraph-color);
+  color: var(--light-dark-color);
 }
 
 .modal__form--input {
   height: 40px;
   padding: 11px 42px;
   outline: transparent;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid var(--light-dark-color);
   border-radius: 4px;
+  color: var(--light-dark-color);
   background: transparent;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -506,7 +509,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   position: absolute;
   left: 12px;
   bottom: 11px;
-  fill: var(--dark-color);
+  fill: var(--light-dark-color);
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -536,7 +539,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  color: var(--paragraph-color);
+  color: var(--light-dark-color);
 }
 @media screen and (min-width: 1200px) {
   .form__label--agree {
@@ -549,9 +552,9 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   width: 16px;
   height: 15px;
   margin-right: 7px;
-  fill: var(--hover-background-color);
+  fill: var(--dropdown-bg);
   background-color: transparent;
-  border: 2px solid var(--paragraph-color);
+  border: 2px solid var(--light-dark-color);
   border-radius: 2px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -559,7 +562,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 
 .form__input--agree:checked + .label__agree--icon {
   border: none;
-  fill: var(--light-color);
+  fill: var(--light-dark-color);
   background-color: var(--accent);
 }
 
@@ -599,6 +602,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 .to-top__button.active {
   bottom: 6%;
   pointer-events: all;
+  cursor: pointer;
   opacity: 0.6;
 }
 
