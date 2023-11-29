@@ -69,11 +69,13 @@
     gap: clamp(0.313rem, -1.384rem + 8.48vw, 6.25rem);
   }
 }
-//  ========= Gallery Swiper ========
-.swiper--wrapper {
+
+.hero__img--wrapper {
   width: clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem);
 
   margin: 0 auto;
+
+  position: relative;
 
   overflow: hidden;
 
@@ -82,35 +84,7 @@
   }
 }
 
-.swiper--wrapper .swiper__line {
-  white-space: nowrap;
-}
-
-.swiper__line {
-  width: calc(100% * 5);
-
-  display: flex;
-
-  cursor: grab;
-
-  transition: all 0.3s ease;
-}
-
-.swiper__slide {
-  position: relative;
-}
-
-.hero__img--wrapper {
-  width: clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem);
-
-  margin: 0 auto;
-
-  @media screen and (min-width: 768px) {
-    margin: 0;
-  }
-}
-
-.swiper__slide-button {
+.hero__img-button {
   position: absolute;
   right: 10%;
   bottom: 10%;
@@ -119,6 +93,7 @@
 
   border-radius: 8px;
 }
+
 // ==================================
 
 .hero__info-list {
