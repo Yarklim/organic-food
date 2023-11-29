@@ -603,7 +603,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   bottom: 6%;
   pointer-events: all;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .to-top__icon {
