@@ -206,7 +206,7 @@ address {
   --hover-background-color: #b6f0da;
   --background-light: #fcfefd;
   --background-dark: #09a66c1e;
-  --dropdown-bg: #598a4c;
+  --dropdown-bg: #38994e;
   --dark-shadow: 4px 4px 15px #09a66c6b;
   --dark-shadow-hover: 6px 8px 20px #09a66c59;
   --mobile: 320px;
@@ -523,7 +523,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   opacity: 0.7;
 }
 .modal__form--input:hover, .modal__form--input:focus {
-  border: 1px solid var(--accent);
+  border: 1px solid var(--hover-background-color);
 }
 
 .form__input--icon {
@@ -537,7 +537,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 
 .modal__form--input:hover + .form__input--icon,
 .modal__form--input:focus + .form__input--icon {
-  fill: var(--accent);
+  fill: var(--hover-background-color);
 }
 
 .form__input--agree {
