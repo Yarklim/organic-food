@@ -70,6 +70,7 @@
   }
 }
 
+// ========== Hero Slider ============
 .hero__img--wrapper {
   width: clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem);
 
@@ -79,19 +80,64 @@
 
   overflow: hidden;
 
+  &::before,
+  &::after {
+    content: '';
+    width: 120px;
+    height: 100%;
+
+    position: absolute;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background: linear-gradient(
+      to left,
+      rgba(243, 251, 248, 0),
+      var(--background-color)
+    );
+  }
+  &::after {
+    top: 0;
+    right: 0;
+
+    background: linear-gradient(
+      to right,
+      rgba(243, 251, 248, 0),
+      var(--background-color)
+    );
+  }
+
   @media screen and (min-width: 768px) {
     margin: 0;
   }
 }
 
-.hero__img-button {
-  position: absolute;
-  right: 10%;
-  bottom: 10%;
+.hero__img--slider {
+  width: calc(100% * 10);
+  display: flex;
 
-  padding: 10px 20px;
+  animation: scroll 60s linear infinite;
+}
 
-  border-radius: 8px;
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.hero__img--wrapper:hover .hero__img--slider {
+  animation-play-state: paused;
+}
+
+.hero__img {
+  width: calc(100% / 10);
 }
 
 // ==================================
