@@ -117,7 +117,8 @@
 }
 
 .hero__img--slider {
-  width: calc(100% * 10);
+  width: calc(clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem) * 10);
+
   display: flex;
 
   animation: scroll 60s linear infinite;
@@ -128,7 +129,9 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(
+      calc(clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem) * -5)
+    );
   }
 }
 

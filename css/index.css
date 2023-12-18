@@ -854,7 +854,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 }
 
 .hero__img--slider {
-  width: 1000%;
+  width: calc(clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem) * 10);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -868,8 +868,8 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(calc(clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem) * -5));
+            transform: translateX(calc(clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem) * -5));
   }
 }
 
@@ -879,8 +879,8 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
             transform: translateX(0);
   }
   to {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(calc(clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem) * -5));
+            transform: translateX(calc(clamp(18.75rem, 11.607rem + 35.71vw, 43.75rem) * -5));
   }
 }
 .hero__img--wrapper:hover .hero__img--slider {
