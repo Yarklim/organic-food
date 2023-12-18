@@ -10,7 +10,7 @@
 
   text-align: center;
 
-  color: var(--light-dark-color);
+  color: var(--title-color);
 
   @media screen and (min-width: 1200px) {
     line-height: 1.15;
@@ -41,7 +41,7 @@
 
   margin-bottom: 4px;
 
-  color: var(--light-dark-color);
+  color: var(--title-color);
 }
 
 .modal__form--input {
@@ -51,24 +51,24 @@
 
   outline: transparent;
 
-  border: 1px solid var(--light-dark-color);
+  border: 1px solid var(--title-color);
   border-radius: 4px;
 
-  color: var(--light-dark-color);
+  color: var(--title-color);
 
   background: transparent;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &::placeholder {
-    color: var(--light-dark-color);
+    color: var(--title-color);
 
     opacity: 0.7;
   }
 
   &:hover,
   &:focus {
-    border: 1px solid var(--hover-background-color);
+    border: 1px solid var(--accent);
   }
 }
 
@@ -78,13 +78,13 @@
   left: 12px;
   bottom: 11px;
 
-  fill: var(--light-dark-color);
+  fill: var(--title-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form--input:hover + .form__input--icon,
 .modal__form--input:focus + .form__input--icon {
-  fill: var(--hover-background-color);
+  fill: var(--accent);
 }
 
 .form__input--agree {
@@ -104,7 +104,7 @@
   line-height: 1.17;
   letter-spacing: 0.03em;
 
-  color: var(--light-dark-color);
+  color: var(--title-color);
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
@@ -118,10 +118,10 @@
 
   margin-right: 7px;
 
-  fill: var(--dropdown-bg);
+  fill: var(--modal-bg);
 
   background-color: transparent;
-  border: 2px solid var(--light-dark-color);
+  border: 2px solid var(--title-color);
   border-radius: 2px;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -129,7 +129,7 @@
 
 .form__input--agree:checked + .label__agree--icon {
   border: none;
-  fill: var(--light-dark-color);
+  fill: var(--light-color);
   background-color: var(--accent);
 }
 
