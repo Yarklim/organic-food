@@ -1791,8 +1791,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   margin: 0 auto;
   font-size: 18px;
   border-radius: 10px;
-  color: var(--paragraph-color);
-  background-color: var(--background-color);
+  color: var(--accent);
 }
 @media screen and (min-width: 768px) {
   .download__app {
