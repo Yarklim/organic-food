@@ -44,6 +44,17 @@ body {
   text-wrap: balance;
 
   color: var(--title-color);
+
+  background: -webkit-linear-gradient(
+    right bottom,
+    #1f7c6d,
+    #579e51,
+    #0bbda5,
+    #359f7f
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section__description {

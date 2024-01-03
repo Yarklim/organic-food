@@ -148,6 +148,10 @@ body {
   line-height: 1.28;
   text-wrap: balance;
   color: var(--title-color);
+  background: -webkit-linear-gradient(right bottom, #1f7c6d, #579e51, #0bbda5, #359f7f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section__description {
@@ -437,9 +441,9 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   left: 50%;
   top: 50%;
   width: calc(100% - 20px);
-  max-width: 700px;
-  max-height: 500px;
-  padding: 40px clamp(1.25rem, -0.75rem + 10vw, 3.75rem);
+  max-width: 540px;
+  max-height: 340px;
+  padding: 30px clamp(1.25rem, -0.75rem + 10vw, 3.75rem);
   background-color: var(--modal-bg);
   -webkit-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.12), 1px 3px 3px rgba(0, 0, 0, 0.14), 1px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.12), 1px 3px 3px rgba(0, 0, 0, 0.14), 1px 2px 1px rgba(0, 0, 0, 0.2);
@@ -470,7 +474,6 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 
 .modal__form--title {
   display: block;
-  padding-top: 40px;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
@@ -493,7 +496,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .modal__form--field {
