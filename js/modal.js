@@ -33,6 +33,7 @@ function openModal(e) {
   document.body.classList.add('no-scroll');
 
   if (e.target.dataset.modalContent === 'contact') {
+    modalContentContainer.innerHTML = '';
     modalContentContainer.innerHTML = makeContactsModalContent();
   } else {
     const productId = Number(e.target.getAttribute('id'));
