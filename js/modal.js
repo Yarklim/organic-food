@@ -1,7 +1,12 @@
-const backdrop = document.querySelector('.backdrop');
-const modal = document.querySelector('[data-modal]');
-const openModalBtn = document.querySelectorAll('[data-modal-open]');
-const closeModalBtn = document.querySelectorAll('[data-modal-close]');
+import { makeContactsModalContent } from './modal-content.js';
+import { makeProductModalContent } from './modal-content.js';
+import { products } from '../src/data/products.js';
+
+const backdropEl = document.querySelector('.backdrop');
+const modalEl = document.querySelector('[data-modal]');
+const openModalBtnEl = document.querySelectorAll('[data-modal-open]');
+const closeModalBtnEl = document.querySelectorAll('[data-modal-close]');
+const modalContentContainer = document.querySelector('.modal__content');
 
 document.addEventListener('keydown', e => {
   if (e.code === 'Escape') {
@@ -9,25 +14,34 @@ document.addEventListener('keydown', e => {
   }
 });
 
-backdrop.addEventListener('click', e => {
+backdropEl.addEventListener('click', e => {
   if (e.currentTarget === e.target) {
     closeModal();
   }
 });
 
-openModalBtn.forEach(el => {
+openModalBtnEl.forEach(el => {
   el.addEventListener('click', openModal);
 });
 
-closeModalBtn.forEach(el => {
+closeModalBtnEl.forEach(el => {
   el.addEventListener('click', closeModal);
 });
 
 function openModal(e) {
-  modal.classList.remove('is-hidden');
+  modalEl.classList.remove('is-hidden');
   document.body.classList.add('no-scroll');
+
+  if (e.target.dataset.modalContent === 'contact') {
+    modalContentContainer.innerHTML = makeContactsModalContent();
+  } else {
+    const productId = Number(e.target.getAttribute('id'));
+
+    modalContentContainer.innerHTML = '';
+    modalContentContainer.append(makeProductModalContent(products[productId]));
+  }
 }
 function closeModal(e) {
-  modal.classList.add('is-hidden');
+  modalEl.classList.add('is-hidden');
   document.body.classList.remove('no-scroll');
 }

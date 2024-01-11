@@ -1,3 +1,4 @@
+// =============== Contact content =============
 .modal__form--title {
   display: block;
 
@@ -138,4 +139,49 @@
   margin: 20px auto 0 auto;
 
   border-radius: 6px;
+}
+
+// ==================== Product content ===================
+.modal__content--product {
+  padding-top: 20px;
+}
+
+.modal__product--img {
+  width: clamp(5rem, 2.273rem + 13.64vw, 12.5rem);
+  height: clamp(5rem, 2.273rem + 13.64vw, 12.5rem);
+
+  float: left;
+  display: flow-root;
+
+  margin-right: clamp(0.625rem, 0.398rem + 1.14vw, 1.25rem);
+
+  &.product-1 {
+    background-image: url(../src/images/pictures/item-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &.product-2 {
+    background-image: url(../src/images/pictures/item-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &.product-3 {
+    background-image: url(../src/images/pictures/item-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &.product-4 {
+    background-image: url(../src/images/pictures/item-4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.modal__product--title {
+  font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+  font-weight: 600;
+}
+
+.modal__product--descr {
+  font-size: clamp(0.75rem, 0.614rem + 0.68vw, 1.125rem);
 }

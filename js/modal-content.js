@@ -1,13 +1,6 @@
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <div class="modal__close" data-modal-close>
-      <svg width="24" height="24" class="modal__close--icon">
-        <use href="./images/sprite.svg#close"></use>
-      </svg>
-    </div>
-
-    <div class="modal__content">
-      <!-- <form class="modal__form" name="contacts-form" id="modal__form">
+export function makeContactsModalContent() {
+  return `
+	<form class="modal__form" name="contacts-form" id="modal__form">
         <strong class="modal__form--title">Contact Us</strong>
         <div
           class="modal__form--details"
@@ -62,25 +55,35 @@
         </div>
 
         <button type="button" class="modal__form--btn btn">Subscribe</button>
-      </form> -->
+      </form>
+	`;
+}
 
-      <!-- <div class="modal__content--product">
-        <img
-          class="modal__product--img"
-          src="../src/images/pictures/item-1.jpg"
-          alt="Cucumber"
-          width="250"
-          height="250"
-        />
+export function makeProductModalContent(content) {
+  const productModalContainerEL = document.createElement('div');
+  productModalContainerEL.classList.add('modal__content--product');
 
-        <h2 class="modal__product--title">Cucumbers</h2>
-        <p class="modal__product--descr">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero
-          eligendi accusantium voluptates voluptas saepe dignissimos dolor
-          voluptatibus blanditiis, quaerat similique illo rem asperiores
-          aspernatur!
-        </p>
-      </div> -->
-    </div>
-  </div>
-</div>
+  const productModalImageEl = document.createElement('div');
+  productModalImageEl.classList.add('modal__product--img');
+  productModalImageEl.classList.add(`${content.id}`);
+  productModalImageEl.src = content.src;
+  productModalImageEl.alt = content.alt;
+  productModalImageEl.width = content.width;
+  productModalImageEl.height = content.height;
+
+  const productModalTitleEl = document.createElement('h2');
+  productModalTitleEl.classList.add('modal__product--title');
+  productModalTitleEl.textContent = content.title;
+
+  const productModalDescrEl = document.createElement('h2');
+  productModalDescrEl.classList.add('modal__product--descr');
+  productModalDescrEl.textContent = content.descr;
+
+  productModalContainerEL.append(
+    productModalImageEl,
+    productModalTitleEl,
+    productModalDescrEl
+  );
+
+  return productModalContainerEL;
+}

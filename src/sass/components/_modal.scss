@@ -28,10 +28,10 @@
   top: 50%;
 
   width: calc(100% - 20px);
-  max-width: 540px;
+  max-width: 640px;
   max-height: 340px;
 
-  padding: 30px clamp(1.25rem, -0.75rem + 10vw, 3.75rem);
+  padding: 30px 20px;
 
   background-color: var(--modal-bg);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.12), 1px 3px 3px rgba(0, 0, 0, 0.14),
