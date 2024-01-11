@@ -33,16 +33,19 @@ function openModal(e) {
   document.body.classList.add('no-scroll');
 
   if (e.target.dataset.modalContent === 'contact') {
-    modalContentContainer.innerHTML = '';
     modalContentContainer.innerHTML = makeContactsModalContent();
+
+    const forBtnEl = document.querySelector('.modal__form--btn');
+
+    forBtnEl.addEventListener('click', closeModal);
   } else {
     const productId = Number(e.target.getAttribute('id'));
 
-    modalContentContainer.innerHTML = '';
     modalContentContainer.append(makeProductModalContent(products[productId]));
   }
 }
 function closeModal(e) {
+  modalContentContainer.innerHTML = '';
   modalEl.classList.add('is-hidden');
   document.body.classList.remove('no-scroll');
 }

@@ -17,9 +17,7 @@ export function makeContactsModalContent() {
               autocomplete="name"
               placeholder="Enter your name"
             />
-            <svg width="18" height="18" class="form__input--icon">
-              <use href="./images/sprite.svg#person-black"></use>
-            </svg>
+            <div class="form__input--icon person"></div>
           </div>
 
           <div class="modal__form--field">
@@ -32,9 +30,7 @@ export function makeContactsModalContent() {
               class="modal__form--input"
               placeholder="Enter your email"
             />
-            <svg class="form__input--icon" width="18" height="18">
-              <use href="./images/sprite.svg#email-black"></use>
-            </svg>
+            <div class="form__input--icon email"></div>
           </div>
         </div>
         <div class="modal__form--checkbox">
@@ -46,9 +42,7 @@ export function makeContactsModalContent() {
               value="agree"
             />
 
-            <svg class="label__agree--icon" width="16" height="15">
-              <use href="./images/sprite.svg#icon-check"></use>
-            </svg>
+            <div class="label__agree--icon"></div>
 
             <span>I agree to receive the newsletter and subscribe</span>
           </label>

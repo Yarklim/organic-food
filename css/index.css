@@ -555,12 +555,17 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 }
 
 .form__input--icon {
+  width: 18px;
+  height: 18px;
   position: absolute;
   left: 12px;
   bottom: 11px;
-  fill: var(--title-color);
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form__input--icon.person {
+  background-image: url(../src/images/icons/person-black.svg);
+}
+.form__input--icon.email {
+  background-image: url(../src/images/icons/email-black.svg);
 }
 
 .modal__form--input:hover + .form__input--icon,
@@ -602,7 +607,6 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   height: 15px;
   margin-right: 7px;
   fill: var(--modal-bg);
-  background-color: transparent;
   border: 2px solid var(--title-color);
   border-radius: 2px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -611,7 +615,8 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 
 .form__input--agree:checked + .label__agree--icon {
   border: none;
-  fill: var(--light-color);
+  background-image: url(../src/images/icons/icon-check.svg);
+  background-size: cover;
   background-color: var(--accent);
 }
 
