@@ -8,12 +8,6 @@ const openModalBtnEl = document.querySelectorAll('[data-modal-open]');
 const closeModalBtnEl = document.querySelectorAll('[data-modal-close]');
 const modalContentContainer = document.querySelector('.modal__content');
 
-document.addEventListener('keydown', e => {
-  if (e.code === 'Escape') {
-    closeModal();
-  }
-});
-
 backdropEl.addEventListener('click', e => {
   if (e.currentTarget === e.target) {
     closeModal();
@@ -32,6 +26,8 @@ function openModal(e) {
   modalEl.classList.remove('is-hidden');
   document.body.classList.add('no-scroll');
 
+  window.addEventListener('keydown', onEscKeyPress);
+
   if (e.target.dataset.modalContent === 'contact') {
     modalContentContainer.innerHTML = makeContactsModalContent();
 
@@ -44,8 +40,16 @@ function openModal(e) {
     modalContentContainer.append(makeProductModalContent(products[productId]));
   }
 }
-function closeModal(e) {
+function closeModal() {
   modalContentContainer.innerHTML = '';
   modalEl.classList.add('is-hidden');
   document.body.classList.remove('no-scroll');
+
+  window.removeEventListener('keydown', onEscKeyPress);
+}
+
+function onEscKeyPress(e) {
+  if (e.key === 'Escape') {
+    closeModal();
+  }
 }
