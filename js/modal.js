@@ -49,7 +49,7 @@ function closeModal() {
 }
 
 function onEscKeyPress(e) {
-  if (e.key === 'Escape') {
+  if (e.code === 'Escape') {
     closeModal();
   }
 }
