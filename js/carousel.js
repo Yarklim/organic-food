@@ -8,23 +8,26 @@ nextBtn.addEventListener('click', toNextImg);
 prevBtn.addEventListener('click', toPrevImg);
 
 function toNextImg() {
+  console.log(position);
+  position -= 33.33;
+
+  prevBtn.removeAttribute('disabled', 'disabled');
+  carousel.style.transform = `translateX(${position}%)`;
+
   if (position === -66.66) {
     nextBtn.setAttribute('disabled', 'disabled');
     return;
   }
-
-  position -= 33.33;
-  prevBtn.removeAttribute('disabled', 'disabled');
-  carousel.style.transform = `translateX(${position}%)`;
 }
 function toPrevImg() {
+  position += 33.33;
+  nextBtn.removeAttribute('disabled', 'disabled');
+  carousel.style.transform = `translateX(${position}%)`;
+
   if (position === 0) {
     prevBtn.setAttribute('disabled', 'disabled');
     return;
   }
-  position += 33.33;
-  nextBtn.removeAttribute('disabled', 'disabled');
-  carousel.style.transform = `translateX(${position}%)`;
 }
 
 // Dragging

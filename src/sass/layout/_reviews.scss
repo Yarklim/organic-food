@@ -140,6 +140,20 @@
 
   transition: all 0.3s ease-in-out;
 
+  &:disabled {
+    background-color: #999999;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #999999;
+      fill: var(--light-dark-color);
+    }
+
+    &:active {
+      scale: 1;
+    }
+  }
+
   &:hover,
   &:focus-visible {
     background-color: var(--hover-accent);

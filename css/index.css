@@ -1746,6 +1746,16 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.carousel__button-icon:disabled {
+  background-color: #999999;
+}
+.carousel__button-icon:disabled:hover, .carousel__button-icon:disabled:focus-visible {
+  background-color: #999999;
+  fill: var(--light-dark-color);
+}
+.carousel__button-icon:disabled:active {
+  scale: 1;
+}
 .carousel__button-icon:hover, .carousel__button-icon:focus-visible {
   background-color: var(--hover-accent);
   fill: var(--light-color);
