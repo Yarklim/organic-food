@@ -820,7 +820,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   height: clamp(6.25rem, 0.893rem + 26.79vw, 25rem);
   position: absolute;
   top: -5%;
-  left: -10%;
+  left: 0;
   background-image: url("../src/images/pictures/fresh-melientha.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -837,7 +837,6 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
 @media screen and (min-width: 572px) {
   .hero__container::before {
     top: -8%;
-    left: -5%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1443,7 +1442,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
     height: clamp(11.25rem, -4.464rem + 32.74vw, 25rem);
     position: absolute;
     bottom: -20%;
-    right: 5%;
+    right: 7%;
     background-image: url("../src/images/pictures/fresh-melientha.png");
     background-size: cover;
     background-repeat: no-repeat;
