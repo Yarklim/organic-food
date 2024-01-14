@@ -1576,6 +1576,12 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;

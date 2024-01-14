@@ -8,21 +8,24 @@ nextBtn.addEventListener('click', toNextImg);
 prevBtn.addEventListener('click', toPrevImg);
 
 function toNextImg() {
-  console.log(position);
   position -= 33.33;
 
   prevBtn.removeAttribute('disabled', 'disabled');
-  carousel.style.transform = `translateX(${position}%)`;
+
+  toChangeImage(position);
 
   if (position === -66.66) {
     nextBtn.setAttribute('disabled', 'disabled');
     return;
   }
 }
+
 function toPrevImg() {
   position += 33.33;
+
   nextBtn.removeAttribute('disabled', 'disabled');
-  carousel.style.transform = `translateX(${position}%)`;
+
+  toChangeImage(position);
 
   if (position === 0) {
     prevBtn.setAttribute('disabled', 'disabled');
@@ -30,28 +33,11 @@ function toPrevImg() {
   }
 }
 
+function toChangeImage(position) {
+  carousel.style.transform = `translateX(${position}%)`;
+}
+
 // Dragging
-// let isDragStart = false,
-//   prevPageX,
-//   prevScrollLeft;
-
-// const dragStart = e => {
-//   isDragStart = true;
-//   prevPageX = e.pageX || e.touches[0].pageX;
-//   prevScrollLeft = carousel.scrollLeft;
-// };
-
-// const dragging = e => {
-//   if (!isDragStart) return;
-
-//   e.preventDefault();
-//   let positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-//   carousel.scrollLeft = prevScrollLeft - positionDiff;
-// };
-
-// const dragStop = () => {
-//   isDragStart = false;
-// };
 
 // carousel.addEventListener('mousedown', dragStart);
 // carousel.addEventListener('touchstart', dragStart);
@@ -62,3 +48,28 @@ function toPrevImg() {
 // carousel.addEventListener('mouseup', dragStop);
 // carousel.addEventListener('mouseleave', dragStop);
 // carousel.addEventListener('touchend', dragStop);
+
+// let isDragStart = false;
+// let startDrag;
+// let endDrag;
+// let positionX;
+
+// function dragStart(e) {
+//   isDragStart = true;
+//   startDrag = e.clientX || e.touches[0].clientX;
+//   prevScrollLeft = carousel.scrollLeft;
+// }
+
+// function dragging(e) {
+//   if (!isDragStart) return;
+
+//   e.preventDefault();
+
+// 	positionX = e.offsetX;
+
+// 	carousel.style.left = `${positionX - startDrag}px`
+// }
+
+// function dragStop() {
+//   isDragStart = false;
+// }

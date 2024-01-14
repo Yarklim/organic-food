@@ -10,6 +10,10 @@
   width: 300%;
   display: flex;
 
+  cursor: grab;
+
+  user-select: none;
+
   transition: transform 0.3s ease-in-out;
 }
 
