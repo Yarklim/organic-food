@@ -32,6 +32,11 @@ function openModal(e) {
     modalContentContainer.innerHTML = makeContactsModalContent();
 
     const forBtnEl = document.querySelector('.modal__form--btn');
+    const checkInputEl = document.querySelector('.form__input--agree');
+
+    checkInputEl.addEventListener('change', () => {
+      forBtnEl.toggleAttribute('disabled');
+    });
 
     forBtnEl.addEventListener('click', closeModal);
   } else {

@@ -44,11 +44,11 @@ export function makeContactsModalContent() {
 
             <div class="label__agree--icon"></div>
 
-            <span>I agree to receive the newsletter and subscribe</span>
+            <span>I consent to the processing of my personal data</span>
           </label>
         </div>
 
-        <button type="button" class="modal__form--btn btn">Subscribe</button>
+        <button type="button" disabled class="modal__form--btn btn">Subscribe</button>
       </form>
 	`;
 }

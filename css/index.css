@@ -626,6 +626,10 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   margin: 20px auto 0 auto;
   border-radius: 6px;
 }
+.modal__form--btn:disabled {
+  background-color: rgb(168, 175, 168);
+  color: rgb(224, 221, 221);
+}
 
 .modal__content--product {
   padding-top: 20px;
