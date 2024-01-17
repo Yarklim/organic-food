@@ -1,4 +1,4 @@
-const carousel = document.querySelector('.js-carousel');
+const slider = document.querySelector('.js-carousel');
 const nextBtn = document.querySelector('.js-button-next');
 const prevBtn = document.querySelector('.js-button-prev');
 
@@ -34,40 +34,43 @@ function toPrevImg() {
 }
 
 function toChangeImage(position) {
-  carousel.style.transform = `translateX(${position}%)`;
+  slider.style.transform = `translateX(${position}%)`;
 }
 
 // Dragging
 
-// carousel.addEventListener('mousedown', dragStart);
-// carousel.addEventListener('touchstart', dragStart);
+// slider.addEventListener('mousedown', dragStart);
+// slider.addEventListener('touchstart', dragStart);
 
-// carousel.addEventListener('mousemove', dragging);
-// carousel.addEventListener('touchmove', dragging);
+// document.addEventListener('mousemove', dragging);
+// slider.addEventListener('touchmove', dragging);
 
-// carousel.addEventListener('mouseup', dragStop);
-// carousel.addEventListener('mouseleave', dragStop);
-// carousel.addEventListener('touchend', dragStop);
+// document.addEventListener('mouseup', dragStop);
+// // slider.addEventListener('mouseleave', dragStop);
+// slider.addEventListener('touchend', dragStop);
 
 // let isDragStart = false;
-// let startDrag;
-// let endDrag;
+// let startPosition;
+// let endPosition;
 // let positionX;
 
 // function dragStart(e) {
 //   isDragStart = true;
-//   startDrag = e.clientX || e.touches[0].clientX;
-//   prevScrollLeft = carousel.scrollLeft;
+//   startPosition = e.pageX || e.touches[0].pageX;
+//   positionX = slider.scrollLeft;
+
+//   console.log('start', startPosition);
+//   console.log('position', positionX);
 // }
 
 // function dragging(e) {
 //   if (!isDragStart) return;
 
 //   e.preventDefault();
+//   slider.classList.add('dragging');
+//   slider.style.transform = `translateX(${positionX - startPosition}px)`;
 
-// 	positionX = e.offsetX;
-
-// 	carousel.style.left = `${positionX - startDrag}px`
+//   //   slider.style.left = `${positionX - startPosition}px`;
 // }
 
 // function dragStop() {

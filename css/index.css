@@ -1576,8 +1576,6 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: -webkit-grab;
-  cursor: grab;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1586,6 +1584,12 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.dragging {
+  cursor: -webkit-grab;
+  cursor: grab;
+  scroll-behavior: auto;
 }
 
 .carousel__item--wrapper {
@@ -1597,6 +1601,7 @@ button:hover .circle__button-arrow, button:focus-visible .circle__button-arrow {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0 5px;
 }
 @media screen and (min-width: 768px) {
   .carousel__item--wrapper {
