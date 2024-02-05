@@ -7,7 +7,7 @@ export const products = [
     height: '250',
     title: 'Cucumbers',
     descr:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi accusantium voluptates voluptas saepe dignissimos dolor voluptatibus blanditiis, quaerat similique illo rem asperiores aspernatur!',
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi accusantium voluptates voluptas saepe dignissimos dolor voluptatibus blanditiis, quaerat similique illo rem asperiores aspernatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
   },
   {
     id: 'product-2',
@@ -17,7 +17,7 @@ export const products = [
     height: '250',
     title: 'Oranges',
     descr:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi accusantium voluptates voluptas saepe dignissimos!',
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi accusantium voluptates voluptas saepe dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi accusantium voluptates voluptas saepe dignissimos',
   },
   {
     id: 'product-3',
@@ -27,7 +27,7 @@ export const products = [
     height: '250',
     title: 'Lettuce',
     descr:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi accusantium voluptates voluptas saepe dignissimos dolor voluptatibus blanditiis, quaerat similique illo rem asperiores aspernatur!',
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi accusantium voluptates voluptas saepe dignissimos dolor voluptatibus blanditiis, quaerat similique illo rem asperiores aspernatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
   },
   {
     id: 'product-4',
@@ -37,6 +37,6 @@ export const products = [
     height: '250',
     title: 'Apples',
     descr:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi dignissimos dolor voluptatibus blanditiis, quaerat similique illo rem asperiores aspernatur!',
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi dignissimos dolor voluptatibus blanditiis, quaerat similique illo rem asperiores aspernatur! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure vero eligendi accusantium voluptates voluptas saepe dignissimos',
   },
 ];
